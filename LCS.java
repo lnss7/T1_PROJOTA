@@ -48,7 +48,7 @@ public class LCS {
 
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
-                iterationsDynamic++; // conta operações do DP
+                iterationsDynamic++; 
                 if (a.charAt(i - 1) == b.charAt(j - 1)) {
                     dp[i][j] = dp[i - 1][j - 1] + 1;
                 } else {
@@ -60,7 +60,7 @@ public class LCS {
         StringBuilder lcs = new StringBuilder();
         int i = m, j = n;
         while (i > 0 && j > 0) {
-            iterationsDynamic++; // conta passos de reconstrucao
+            iterationsDynamic++; 
             if (a.charAt(i - 1) == b.charAt(j - 1)) {
                 lcs.append(a.charAt(i - 1));
                 i--;
